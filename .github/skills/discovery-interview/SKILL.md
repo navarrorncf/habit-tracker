@@ -20,8 +20,10 @@ clear enough to plan. It is a discovery gate, not an implementation workflow.
 - Preserve the existing approval boundaries in `AGENTS.md`.
 
 If the selected idea has no ticket ID, stop and ask the coordinator to assign the
-next unused ID and move it to `In Progress` before continuing. Ticket IDs are
-permanent once assigned.
+next unused numeric ID and move it to `In Progress` before continuing. The sole
+exception is backlog or workflow maintenance, which may use the reserved `HT-X`
+reference. `HT-X` is not part of the numeric sequence and must not be used for
+product or learning work. Numeric ticket IDs are permanent once assigned.
 
 ## Context
 

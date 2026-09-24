@@ -2,7 +2,7 @@
 
 - **Status**: Proposed | Accepted | Superseded
 - **Date**: YYYY-MM-DD
-- **Ticket**: [HT-N](../backlog.md)
+- **Ticket**: [HT-N or HT-X](../backlog.md)
 
 ## Context
 
@@ -29,8 +29,8 @@
 
 ## Links
 
-- Backlog: [HT-N](../backlog.md)
-- Plan: [HT-N plan](../plans/HT-N-short-title.md)
+- Backlog: [HT-N or HT-X](../backlog.md)
+- Plan: [HT-N or HT-X plan](../plans/HT-N-or-HT-X-short-title.md)
 - Code: [Relevant file](../../src/main/)
 - Tests: [Relevant test](../../src/test/)
 - Supersedes or related: [ADR-XXX](ADR-XXX-short-title.md)

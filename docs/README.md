@@ -25,6 +25,7 @@ Do not scan all plans, decisions, or completed history by default. Links are the
 
 - Ideas remain broad and unnumbered until work is picked up.
 - Picking up an idea assigns the next unused `HT-N` ticket ID and moves it to `In Progress`.
+- Backlog and workflow maintenance uses the reserved `HT-X` reference. It does not consume a numeric ID and is not a substitute for a product or learning ticket.
 - Discovery challenges the scope, assumptions, risks, gaps, dependencies, and affected surfaces.
 - A ticket that is ready for implementation gets a plan under `plans/`.
 - Implementation updates the plan with files, tests, documentation, deviations, and follow-up work.

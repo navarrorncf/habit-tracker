@@ -1,9 +1,12 @@
-# Plan: HT-N - [Short title]
+# Plan: HT-N or HT-X - [Short title]
 
 - **Status**: Draft | In progress | Complete | Blocked
 - **Created**: YYYY-MM-DD
 - **Completed**: YYYY-MM-DD or `-`
-- **Backlog**: [HT-N](../backlog.md)
+- **Backlog**: [HT-N or HT-X](../backlog.md)
+
+Use `HT-X` only for a plan about backlog or workflow maintenance. Feature and
+learning work must use a permanent numeric ticket ID.
 
 ## Discovery Summary
 
