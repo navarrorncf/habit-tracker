@@ -37,6 +37,7 @@
 
 - The documentation map and selective-reading protocol live in [docs/README.md](docs/README.md); the broad ticket list is [docs/backlog.md](docs/backlog.md).
 - Ideas remain unnumbered until picked up. Picking one up assigns the next unused permanent `HT-N` ticket ID.
+- Backlog and workflow maintenance may use the reserved `HT-X` reference; it does not consume a numeric ID and must not be used for product or learning work.
 - Run `.github/skills/discovery-interview/SKILL.md` before planning a selected ticket. Proceed to implementation only after the discovery result is `ready for planning` and the plan is accepted.
 - Keep active discovery summaries and implementation details in the ticket plan. Keep durable cross-cutting decisions in `docs/decisions/`.
 - Move completed tickets to the same backlog's `Done` section with outcome and durable links; archive only when that section becomes difficult to scan.
