@@ -4,6 +4,12 @@ This project uses Quarkus, the Supersonic Subatomic Java Framework.
 
 If you want to learn more about Quarkus, please visit its website: <https://quarkus.io/>.
 
+## AI-assisted development
+
+The repository's AI development workflow, including shared instructions,
+prompts, agents, and the approval-first harness, is documented in
+[docs/ai-assisted-development.md](docs/ai-assisted-development.md).
+
 ## Running the application in dev mode
 
 You can run your application in dev mode that enables live coding using:
