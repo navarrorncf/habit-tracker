@@ -41,16 +41,29 @@ Instructions and prompts guide an agent. Skills organize repeatable work.
 Custom agents control roles and tools. Hooks enforce selected behavior at
 runtime. A harness combines these pieces with deterministic checks.
 
+## Discovery gate
+
+When a backlog ticket is selected, run the on-demand
+`.github/skills/discovery-interview/SKILL.md` before planning. The discovery
+workflow is read-only: it challenges the outcome, scope, non-goals, acceptance
+checks, assumptions, risks, gaps, dependencies, and affected surfaces. It
+returns `refine backlog`, `ready for planning`, or `park/block`.
+
+Only a ticket marked `ready for planning` should move to the feature planner.
+Copy the distilled discovery brief into the active ticket plan; do not store a
+full conversation transcript or load unrelated plans and decisions.
+
 ## First workflow
 
-For a small feature or learning exercise:
+After discovery returns `ready for planning`, use the following workflow for a
+small feature or learning exercise:
 
 1. State the goal and the behavior that should change.
 2. Ask the agent to inspect nearby code, tests, configuration, and relevant
    project instructions before proposing an implementation.
 3. Choose a focused prompt, skill, or agent. Use the mentor for explanations,
    the planner for design, the implementer for edits, and the reviewer for a
-   second pass.
+   second pass. Do not use the implementer to bypass discovery or planning.
 4. Confirm the proposed file changes, dependency changes, configuration
    changes, and commands before allowing work that has external consequences.
 5. Make the smallest implementation that fits existing patterns.
@@ -81,6 +94,8 @@ state. Do not weaken those protections to make an agent workflow convenient.
 
 - Start from the smallest relevant code surface and expand only when evidence
   requires it.
+- For ticket work, read `AGENTS.md`, the relevant entry in `docs/backlog.md`,
+  the active ticket plan, and only the decisions linked from that plan.
 - Prefer links to durable project documentation over copying large instructions
   into prompts or agents.
 - Keep prompts single-purpose and descriptions keyword-rich so the right one is
