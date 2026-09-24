@@ -11,6 +11,12 @@ Use this skill for a change that should leave the repository in a verified,
 understandable state. It is intentionally explicit so the workflow teaches
 both Quarkus and AI-assisted development.
 
+For a selected backlog ticket, run
+`.github/skills/discovery-interview/SKILL.md` first. This skill assumes that
+discovery returned `ready for planning` and that the resulting plan was
+accepted. Do not use the implementation workflow to bypass unresolved scope,
+risk, or dependency questions.
+
 ## Procedure
 
 1. **Orient**
@@ -56,7 +62,10 @@ both Quarkus and AI-assisted development.
 
    Run `./mvnw verify -B` when the implementation is complete. Report files
    changed, checks run and their results, Quarkus concepts learned, and any
-   remaining uncertainty. If a check cannot run, state why.
+   remaining uncertainty. Update the active ticket plan with final files,
+   tests, documentation, deviations, and follow-up work. Move the same ticket
+   to `Done` with its outcome and durable links. If a check cannot run, state
+   why.
 
 ## Output format
 
