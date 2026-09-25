@@ -13,6 +13,13 @@
 - Never commit credentials, local `.env` files, generated build output, or machine-specific AI configuration.
 - Ask for approval before destructive commands, external writes, dependency changes with security or licensing implications, or broad repository changes.
 
+## Git Workflow
+
+- Commit messages use `type(HT-<number>|HT-X): description` with one of `feat`, `fix`, `docs`, `style`, `refactor`, `perf`, `test`, `build`, `ci`, `chore`, or `revert`.
+- Work branches use `type/HT-<number>|HT-X/short_description`; the description contains lowercase letters, digits, hyphens, or underscores. `dev` and `main` are the protected integration-branch exceptions.
+- Install the local `commit-msg` and `pre-push` checks with `./.githooks/install.sh`. They are opt-in and can be bypassed with Git's `--no-verify` flags.
+- Pull-request CI validates the source branch and every introduced commit, so CI remains the enforcement boundary.
+
 ## Build and Test
 
 - Run the narrowest relevant check first, then run `./mvnw verify -B` before claiming a change is complete.

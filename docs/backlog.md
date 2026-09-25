@@ -17,7 +17,6 @@ Feature and learning ticket IDs are assigned when work is picked up, not when an
 
 Unstarted topics live here without ticket IDs. Not necessarily ordered by priority.
 
-- Pre-commit hook with commit message validation, branch name validation, etc
 - Linter, formatter and CI quality gate (GitHub workflows)
 - Flyway set up
 - Habit entity / model / CRUD / API
@@ -34,6 +33,14 @@ No active tickets.
 No blocked or parked tickets.
 
 ## Done
+
+### HT-2: Commit and branch validation hooks
+
+- **Status**: Done
+- **Completed**: 2026-09-25
+- **Outcome**: Added dependency-free POSIX-shell commit-message and pre-push branch validation, repository-local hook installation, pull-request CI enforcement, focused shell tests, contributor documentation, and an accepted tooling decision.
+- **Follow-up**: None.
+- **Related files**: [HT-2 plan](plans/HT-2-pre-commit-hook.md), [Git validation decision](decisions/ADR-HT-2-git-validation.md), [.githooks/](../.githooks/), [Git convention scripts](../scripts/)
 
 ### HT-0: Initial AI tooling
 

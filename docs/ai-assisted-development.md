@@ -33,7 +33,7 @@ Use the smallest primitive that fits the problem:
 | Prompt | One focused request with a repeatable output | Plan a feature or review a change |
 | Skill | A multi-step procedure used on demand | Implement and verify a Quarkus feature |
 | Custom agent | A role with a purpose and tool boundary | Implementer, reviewer, or mentor |
-| Hook | Deterministic lifecycle enforcement | A future check that asks before a dangerous command |
+| Hook | Deterministic lifecycle enforcement | `.githooks/` and `scripts/` validate commit messages and work branches |
 | MCP | An external tool or data integration | A future, explicitly approved service integration |
 | Harness | The controlled loop around an agent | Context, action, checks, review, and result |
 
