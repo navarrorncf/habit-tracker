@@ -22,6 +22,7 @@ Unstarted topics live here without ticket IDs. Not necessarily ordered by priori
 - Keycloak IDP integration
 - User entity / model / CRUD / API >> user<>habit relation table
 - Spike: Tracking modes (daily, weekly, 'x' times per 'y' period, every 'x' period, etc)
+- Set up automatic code review in GitHub with a dedicated SKILL.md file
 
 ## In Progress
 
