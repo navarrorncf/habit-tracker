@@ -1,6 +1,6 @@
 ---
 name: quarkus-feature
-description: "Use when implementing or learning a focused Quarkus feature, REST endpoint, Panache persistence behavior, configuration change, or related test."
+description: "Use when implementing or learning a focused Quarkus feature, REST endpoint, Panache persistence behavior, Flyway migration, configuration change, or related test."
 argument-hint: "Describe the Quarkus feature or learning exercise"
 user-invocable: true
 ---
@@ -46,6 +46,15 @@ risk, or dependency questions.
    configuration responsibilities in their appropriate boundaries. Add or
    update tests with the behavior, including meaningful failure paths.
 
+   For Flyway migrations, distinguish migration-script idempotence from
+   migration-runner idempotence. Versioned migrations should be deterministic,
+   forward-only, and fail fast; do not add `IF EXISTS` or `IF NOT EXISTS` just
+   to make an applied script safe to run again. Flyway history and checksums
+   prevent successful versions from being rerun and detect drift. Use a new
+   versioned migration for later schema changes. If an existing or partially
+   managed schema requires conditional reconciliation, document that starting
+   state and test the reconciliation behavior explicitly.
+
 5. **Verify narrowly**
 
    Run the cheapest relevant check immediately. Use `./mvnw test` for the fast
@@ -56,7 +65,10 @@ risk, or dependency questions.
 
    Inspect the diff for accidental files, secrets, generated output, unrelated
    formatting, and contradictions between code, tests, and documentation. Use
-   the read-only Quarkus Reviewer when a second pass is useful.
+   the read-only Quarkus Reviewer when a second pass is useful. For Flyway
+   changes, also confirm that migration history owns reruns, applied migrations
+   remain immutable, and schema drift is surfaced rather than hidden by
+   idempotency guards.
 
 7. **Complete**
 
