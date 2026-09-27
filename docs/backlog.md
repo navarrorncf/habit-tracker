@@ -17,7 +17,6 @@ Feature and learning ticket IDs are assigned when work is picked up, not when an
 
 Unstarted topics live here without ticket IDs. Not necessarily ordered by priority.
 
-- Linter, formatter and CI quality gate (GitHub workflows)
 - Habit entity / model / CRUD / API
 - Keycloak IDP integration
 - User entity / model / CRUD / API >> user<>habit relation table
@@ -25,7 +24,13 @@ Unstarted topics live here without ticket IDs. Not necessarily ordered by priori
 
 ## In Progress
 
-No active tickets.
+### HT-5: Linting, formatting, and CI quality gate
+
+- **Status**: In progress
+- **Started**: 2026-09-27
+- **Outcome target**: Enforce Java formatting, style, and bug analysis through the Maven verification lifecycle and GitHub Actions.
+- **Validation sequence**: The initial pull request will intentionally retain the current Java findings so the quality gate can be observed failing before the cleanup commits are added.
+- **Related files**: [HT-5 plan](plans/HT-5-linting-formatting-ci.md), [Java quality gate decision](decisions/ADR-HT-5-java-quality-gate.md), [contributor guide](../CONTRIBUTING.md)
 
 ## Blocked/Parked
 
