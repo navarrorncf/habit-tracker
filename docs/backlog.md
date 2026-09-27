@@ -24,19 +24,22 @@ Unstarted topics live here without ticket IDs. Not necessarily ordered by priori
 
 ## In Progress
 
-### HT-5: Linting, formatting, and CI quality gate
-
-- **Status**: In progress
-- **Started**: 2026-09-27
-- **Outcome target**: Enforce Java formatting, style, and bug analysis through the Maven verification lifecycle and GitHub Actions.
-- **Validation sequence**: The initial pull request will intentionally retain the current Java findings so the quality gate can be observed failing before the cleanup commits are added.
-- **Related files**: [HT-5 plan](plans/HT-5-linting-formatting-ci.md), [Java quality gate decision](decisions/ADR-HT-5-java-quality-gate.md), [contributor guide](../CONTRIBUTING.md)
+No active tickets.
 
 ## Blocked/Parked
 
 No blocked or parked tickets.
 
 ## Done
+
+### HT-5: Linting, formatting, and CI quality gate
+
+- **Status**: Done
+- **Completed**: 2026-09-27
+- **Outcome**: Added pinned Spotless, Google Checkstyle, and SpotBugs Maven checks for handwritten production and test Java, bound them to `verify`, documented local remediation, and enforced the gate through the existing GitHub Actions build.
+- **Validation**: PR #9 first failed on the five existing Spotless findings, then follow-up commit `2e16219` passed the GitHub Actions build after formatting cleanup. Focused Maven checks, tests, and `./mvnw verify -B` passed locally.
+- **Follow-up**: None. SpotBugs reports a non-blocking optional `JsonbTransient` analysis-class warning while still returning zero findings.
+- **Related files**: [HT-5 plan](plans/HT-5-linting-formatting-ci.md), [Java quality gate decision](decisions/ADR-HT-5-java-quality-gate.md), [contributor guide](../CONTRIBUTING.md), [Maven build](../pom.xml), [CI workflow](../.github/workflows/ci.yml)
 
 ### HT-4: Shared code-review skill
 
@@ -62,6 +65,14 @@ No blocked or parked tickets.
 - **Follow-up**: None.
 - **Related files**: [HT-2 plan](plans/HT-2-pre-commit-hook.md), [Git validation decision](decisions/ADR-HT-2-git-validation.md), [.githooks/](../.githooks/), [Git convention scripts](../scripts/)
 
+### HT-1: Project-management workflow
+
+- **Status**: Done
+- **Completed**: 2026-09-24
+- **Outcome**: Established a docs-as-code backlog, discovery gate, per-ticket plans, and ADR lifecycle for project work.
+- **Follow-up**: Future ideas receive the next unused ticket ID when picked up.
+- **Related files**: [Documentation guide](README.md), `plans/`, `decisions/`, `.github/skills/discovery-interview/`
+
 ### HT-0: Initial AI tooling
 
 - **Status**: Done
@@ -70,11 +81,3 @@ No blocked or parked tickets.
 - **Outcome**: Added the portable project contract, AI-assisted development workflow, scoped instructions, reusable prompts, role-specific agents, the Quarkus feature skill, and CI baseline.
 - **Follow-up**: HT-1
 - **Related files**: [AGENTS.md](../AGENTS.md), [AI-assisted development workflow](ai-assisted-development.md), `.github/`
-
-### HT-1: Project-management workflow
-
-- **Status**: Done
-- **Completed**: 2026-09-24
-- **Outcome**: Established a docs-as-code backlog, discovery gate, per-ticket plans, and ADR lifecycle for project work.
-- **Follow-up**: Future ideas receive the next unused ticket ID when picked up.
-- **Related files**: [Documentation guide](README.md), `plans/`, `decisions/`, `.github/skills/discovery-interview/`

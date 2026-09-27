@@ -1,8 +1,8 @@
 # Plan: HT-5 - Linting, formatting, and CI quality gate
 
-- **Status**: In progress
+- **Status**: Complete
 - **Created**: 2026-09-27
-- **Completed**: -
+- **Completed**: 2026-09-27
 - **Backlog**: [HT-5](../backlog.md)
 
 ## Discovery Summary
@@ -94,11 +94,12 @@ cleanup is added. The same pull request must pass after the cleanup commits.
 - 2026-09-27: The initial pull-request validation failed as intended at the quality-gate build step for the five Spotless findings; no Checkstyle or SpotBugs finding was reported.
 - 2026-09-27: `./mvnw spotless:apply -B` formatted the five reported files. The focused Spotless, Checkstyle, and SpotBugs goals then passed; the fast test suite and the complete `./mvnw verify -B` lifecycle also passed.
 - 2026-09-27: SpotBugs continues to print a non-fatal missing optional class warning for `jakarta.json.bind.annotation.JsonbTransient`; it reports zero bugs and errors and does not affect the gate.
+- 2026-09-27: PR #9's follow-up commit `2e16219` passed the GitHub Actions `build` check. The separate automated pull-request review was still in progress when checked.
 
 ## Outcome and Deviations
 
-- **What shipped**: -
-- **Files**: -
-- **Verification**: -
-- **Deviations**: -
-- **Follow-up**: -
+- **What shipped**: Added Spotless with Google Java Format, Google Checkstyle, and SpotBugs to the Maven verification lifecycle; formatted the existing Java baseline; documented local quality commands; and retained one blocking `./mvnw verify -B` CI command.
+- **Files**: `pom.xml`, `.github/workflows/ci.yml`, `README.md`, `CONTRIBUTING.md`, all five handwritten Java files, the HT-5 ADR, this plan, and `docs/backlog.md`.
+- **Verification**: The initial PR #9 run failed on the five expected Spotless findings. Follow-up commit `2e16219` passed the GitHub Actions build. Local focused checks, `./mvnw test`, `./mvnw verify -B`, and `git diff --check` passed.
+- **Deviations**: SpotBugs emits a non-fatal warning for the optional `jakarta.json.bind.annotation.JsonbTransient` class; it reports zero bugs and errors and does not fail the build.
+- **Follow-up**: None.
