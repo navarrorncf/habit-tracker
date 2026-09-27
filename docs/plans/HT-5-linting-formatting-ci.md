@@ -91,6 +91,9 @@ cleanup is added. The same pull request must pass after the cleanup commits.
 - 2026-09-27: `./mvnw checkstyle:check -B` resolved Checkstyle 3.6.0 and the built-in Google checks and passed with zero violations.
 - 2026-09-27: `./mvnw spotbugs:check -B` resolved SpotBugs 4.9.8.2, completed test analysis on JDK 25, and reported zero bugs or errors.
 - 2026-09-27: `./mvnw verify -B` ran the existing three tests successfully, then failed at the lifecycle-bound Spotless check on the same five intentional baseline findings.
+- 2026-09-27: The initial pull-request validation failed as intended at the quality-gate build step for the five Spotless findings; no Checkstyle or SpotBugs finding was reported.
+- 2026-09-27: `./mvnw spotless:apply -B` formatted the five reported files. The focused Spotless, Checkstyle, and SpotBugs goals then passed; the fast test suite and the complete `./mvnw verify -B` lifecycle also passed.
+- 2026-09-27: SpotBugs continues to print a non-fatal missing optional class warning for `jakarta.json.bind.annotation.JsonbTransient`; it reports zero bugs and errors and does not affect the gate.
 
 ## Outcome and Deviations
 
