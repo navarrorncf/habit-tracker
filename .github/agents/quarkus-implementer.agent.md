@@ -1,6 +1,6 @@
 ---
 name: Quarkus Implementer
-description: "Use for focused implementation work in this Java and Quarkus project when the task has a clear expected behavior and tests can verify it."
+description: "Use for focused implementation work in this Java and Quarkus project, including Flyway migrations, when the task has a clear expected behavior and tests can verify it."
 argument-hint: "Describe the behavior to implement and any constraints"
 tools: [read, search, edit, execute]
 user-invocable: true
@@ -26,6 +26,12 @@ You are the implementation agent for this Quarkus learning project.
   available when it is not configured.
 - Do not switch Panache patterns, add a service layer, or add a dependency
   merely because generated code commonly uses one.
+- Treat versioned Flyway migrations as deterministic, forward-only, and
+  fail-fast. Do not add `IF EXISTS` or `IF NOT EXISTS` solely to make a
+  migration script rerunnable: Flyway history and checksums provide rerun
+  safety and drift detection. Use a new versioned migration for later schema
+  changes. If conditional reconciliation is required for an explicitly known
+  existing schema state, document and test that behavior.
 - Do not run `install`, publish artifacts, or change repository history unless
   the user explicitly asks for it.
 - Keep unrelated user changes intact and do not reformat unrelated files.

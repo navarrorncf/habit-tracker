@@ -18,7 +18,6 @@ Feature and learning ticket IDs are assigned when work is picked up, not when an
 Unstarted topics live here without ticket IDs. Not necessarily ordered by priority.
 
 - Linter, formatter and CI quality gate (GitHub workflows)
-- Flyway set up
 - Habit entity / model / CRUD / API
 - Keycloak IDP integration
 - User entity / model / CRUD / API >> user<>habit relation table
@@ -33,6 +32,14 @@ No active tickets.
 No blocked or parked tickets.
 
 ## Done
+
+### HT-3: Flyway schema foundation
+
+- **Status**: Done
+- **Completed**: 2026-09-25
+- **Outcome**: Added BOM-managed Quarkus Flyway support, a versioned PostgreSQL migration for the baseline `Habit` schema, Hibernate schema validation, DevServices-backed persistence tests, and the accepted schema-management decision. Removed the unused generated entity and seed scaffold.
+- **Follow-up**: Habit CRUD/API remains in the Ideas section.
+- **Related files**: [HT-3 plan](plans/HT-3-flyway-setup.md), [Flyway schema decision](decisions/ADR-HT-3-flyway-schema-management.md), [Habit entity](../src/main/java/com/navarrorncf/Habit.java), [Habit migration](../src/main/resources/db/migration/V1.0.0__create_habit_table.sql), [Habit tests](../src/test/java/com/navarrorncf/HabitTest.java)
 
 ### HT-2: Commit and branch validation hooks
 
