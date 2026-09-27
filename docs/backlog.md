@@ -22,7 +22,6 @@ Unstarted topics live here without ticket IDs. Not necessarily ordered by priori
 - Keycloak IDP integration
 - User entity / model / CRUD / API >> user<>habit relation table
 - Spike: Tracking modes (daily, weekly, 'x' times per 'y' period, every 'x' period, etc)
-- Set up automatic code review in GitHub with a dedicated SKILL.md file
 
 ## In Progress
 
@@ -33,6 +32,14 @@ No active tickets.
 No blocked or parked tickets.
 
 ## Done
+
+### HT-4: Shared code-review skill
+
+- **Status**: Done
+- **Completed**: 2026-09-27
+- **Outcome**: Added a shared, Quarkus/Maven-aware code-review skill at the GitHub-discoverable path, delegated the local reviewer and prompt to the same procedure, and confirmed that GitHub automatic pull-request review discovers and applies the skill successfully.
+- **Follow-up**: None.
+- **Related files**: [HT-4 plan](plans/HT-4-code-review-skill.md), [code-review skill](../.github/skills/code-review/SKILL.md), [Quarkus Reviewer](../.github/agents/quarkus-reviewer.agent.md), [review prompt](../.github/prompts/review-quarkus-change.prompt.md), [skill boundary decision](decisions/ADR-HT-4-code-review-skill-boundary.md)
 
 ### HT-3: Flyway schema foundation
 
