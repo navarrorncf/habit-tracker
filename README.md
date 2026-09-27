@@ -10,6 +10,11 @@ The repository's AI development workflow, including shared instructions,
 prompts, agents, and the approval-first harness, is documented in
 [docs/ai-assisted-development.md](docs/ai-assisted-development.md).
 
+## Contributing
+
+See [CONTRIBUTING.md](CONTRIBUTING.md) for local quality checks and contribution
+workflow.
+
 ## Running the application in dev mode
 
 You can run your application in dev mode that enables live coding using:

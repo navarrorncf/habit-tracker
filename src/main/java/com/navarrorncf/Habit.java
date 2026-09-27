@@ -6,6 +6,6 @@ import jakarta.persistence.Entity;
 
 @Entity
 public class Habit extends PanacheEntity {
-    @Column(nullable = false, length = 255)
-    public String name;
+  @Column(nullable = false, length = 255)
+  public String name;
 }

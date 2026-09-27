@@ -37,5 +37,5 @@ jobs:
           ./scripts/validate-git-conventions.sh branch "$BRANCH_NAME"
           ./scripts/validate-git-conventions.sh commit-range "$BASE_SHA" "$HEAD_SHA"
 
-      - name: Build
+      - name: Quality gate and build
         run: ./mvnw verify -B
